@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    /* Module Resolution */
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
+    /* Source Maps */
+    "sourceMap": true,
+
+    /* Strict Checks */
+    "strict": true,
+
+    /* Linter Checks */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Experimental Options */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    /* Advanced Options */
+    "resolveJsonModule": true,
+
+    /* JSX Options */
+    "jsx": "react",
+    "jsxFactory": "React.createElement"
+  },
+  "compileOnSave": false
+}

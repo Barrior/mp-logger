@@ -1,0 +1,89 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "simple-import-sort",
+    "unused-imports"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "ignorePatterns": ["dist/", "/packages/logger/lib/", "**/*.min.js"],
+  "rules": {
+    // Misc lint of ESLint
+    "no-console": "warn",
+    "lines-between-class-members": ["error", "always"],
+    "eqeqeq": ["error", "always"],
+
+    // Misc lint of Typescript
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "Function": false
+        }
+      }
+    ],
+
+    // Comments
+    "no-inline-comments": "error",
+    "line-comment-position": ["error", { "position": "above" }],
+    "lines-around-comment": [
+      "error",
+      {
+        "beforeBlockComment": true,
+        "beforeLineComment": false,
+        "allowBlockStart": true,
+        "allowClassStart": true,
+        "allowObjectStart": true,
+        "allowArrayStart": true
+      }
+    ],
+    "multiline-comment-style": ["error", "separate-lines"],
+    "spaced-comment": ["error", "always", { "block": { "balanced": true } }],
+
+    // Import sorting and remove unused imports
+    "sort-imports": "off",
+    "import/order": "off",
+    "import/first": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports-ts": "error",
+    "unused-imports/no-unused-vars-ts": [
+      "error",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": "**/*.js",
+      "rules": {
+        "simple-import-sort/imports": "off",
+        "import/order": "error"
+      }
+    }
+  ]
+}

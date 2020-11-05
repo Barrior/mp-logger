@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+.emulator {
+  color: #333;
+}
+
+.title {
+  text-align: center;
+  margin: 50px auto 10px;
+}
+
+.device-frame {
+  width: 405px;
+  height: 780px;
+  margin: 0 auto 50px;
+  padding: 63px 15px 135px;
+  background: url('../img/phone-frame.svg') no-repeat;
+  background-size: cover;
+}
+
+.nav-bar {
+  background: #fff;
+  padding: 0 6px;
+}
+
+.nav-bar img {
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.content-area {
+  background: #fff;
+  height: 100%;
+}
+
+.tips {
+  text-align: center;
+  padding: 32px 0 16px;
+}
+
+.tips .hint,
+.tips .hint a {
+  font-size: 14px;
+  color: #999;
+}
+
+[class*='btn-'] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 40px;
+  margin: 10px auto;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 26px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.4s opacity;
+}
+
+[class*='btn-']:active {
+  opacity: 0.8;
+}
+
+.btn-info {
+  background-color: #409eff;
+}
+
+.btn-warn {
+  background-color: #e6a23c;
+}
+
+.btn-danger {
+  background-color: #f56c6c;
+}

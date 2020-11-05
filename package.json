@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "name": "root",
+  "version": "0.0.1",
+  "description": "realtime logger solution for debug online mini program.",
+  "author": "Barrior <barrior@qq.com>",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lerna:publish": "yarn logger run build && lerna publish from-package",
+    "server": "yarn workspace @mp-logger/server",
+    "example": "yarn workspace @mp-logger/example",
+    "logger": "yarn workspace @mp-logger/logger"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{scss,css}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^6.0.0",
+    "eslint-plugin-unused-imports": "^1.0.0",
+    "husky": "^4.3.0",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.5.1",
+    "prettier": "^2.1.2",
+    "stylelint": "^13.7.2",
+    "typescript": "^4.1.2"
+  }
+}

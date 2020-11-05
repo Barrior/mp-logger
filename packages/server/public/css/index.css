@@ -1,0 +1,12 @@
+#__vconsole .vc-panel {
+  top: 0;
+  transition: none !important;
+}
+
+#__vconsole .vc-switch {
+  visibility: hidden;
+}
+
+#__vconsole .vc-toolbar .vc-hide {
+  display: none !important;
+}

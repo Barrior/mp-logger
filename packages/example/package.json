@@ -1,0 +1,59 @@
+{
+  "private": true,
+  "name": "@mp-logger/example",
+  "version": "0.0.1",
+  "description": "use case for mp-logger",
+  "templateInfo": {
+    "name": "default",
+    "typescript": true,
+    "css": "sass"
+  },
+  "scripts": {
+    "build:weapp": "taro build --type weapp",
+    "build:swan": "taro build --type swan",
+    "build:alipay": "taro build --type alipay",
+    "build:tt": "taro build --type tt",
+    "build:h5": "taro build --type h5",
+    "build:rn": "taro build --type rn",
+    "build:qq": "taro build --type qq",
+    "build:jd": "taro build --type jd",
+    "build:quickapp": "taro build --type quickapp",
+    "dev:weapp": "npm run build:weapp -- --watch",
+    "dev:swan": "npm run build:swan -- --watch",
+    "dev:alipay": "npm run build:alipay -- --watch",
+    "dev:tt": "npm run build:tt -- --watch",
+    "dev:h5": "npm run build:h5 -- --watch",
+    "dev:rn": "npm run build:rn -- --watch",
+    "dev:qq": "npm run build:qq -- --watch",
+    "dev:jd": "npm run build:jd -- --watch",
+    "dev:quickapp": "npm run build:quickapp -- --watch"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "dependencies": {
+    "@babel/runtime": "^7.7.7",
+    "@mp-logger/logger": "^0.0.1",
+    "@tarojs/components": "3.0.11",
+    "@tarojs/react": "3.0.11",
+    "@tarojs/runtime": "3.0.11",
+    "@tarojs/taro": "3.0.11",
+    "lodash": "^4.17.20",
+    "react": "^16.10.0",
+    "react-dom": "^16.10.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.0",
+    "@tarojs/mini-runner": "3.0.11",
+    "@tarojs/webpack-runner": "3.0.11",
+    "@types/lodash": "^4.14.162",
+    "@types/react": "^16.0.0",
+    "@types/webpack-env": "^1.13.6",
+    "archiver": "^5.0.2",
+    "babel-preset-taro": "3.0.11",
+    "chalk": "^4.1.0",
+    "moment": "^2.29.0"
+  }
+}
