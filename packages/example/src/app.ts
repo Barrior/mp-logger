@@ -19,19 +19,19 @@ class App extends Component<{ children: React.ReactNode }> {
   }
 
   componentDidMount() {
-    console.log('[App Component]: componentDidMount')
+    logger.log('[App Component]: componentDidMount')
   }
 
   componentDidShow() {
-    console.log('[App Component]: componentDidShow')
+    logger.log('[App Component]: componentDidShow')
   }
 
   componentDidHide() {
-    console.log('[App Component]: componentDidHide')
+    logger.log('[App Component]: componentDidHide')
   }
 
   componentDidCatchError() {
-    console.log('[App Component]: componentDidCatchError')
+    logger.log('[App Component]: componentDidCatchError')
   }
 
   render() {
