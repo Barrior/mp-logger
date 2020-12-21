@@ -1,5 +1,7 @@
 # 线上小程序实时日志 Debug 平台
 
+![demo.gif](https://storage.360buyimg.com/bgif/mplogger-demo.gif)
+
 项目由 3 个小项目组成，分别为
 
 - `packages/example`: 小程序使用示例。
