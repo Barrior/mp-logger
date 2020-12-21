@@ -2,17 +2,12 @@
 
 > 线上小程序实时日志 Debug 平台 SDK
 
-## 安装
+1、安装
 
-通过 NPM
+- 通过 NPM: `npm install @mp-logger/logger`
+- 通过 CDN: https://unpkg.com/browse/@mp-logger/logger/lib/index.min.js
 
-```bash
-npm install @mp-logger/logger
-```
-
-通过 CDN 地址：https://unpkg.com/browse/@mp-logger/logger/lib/index.min.js
-
-## 使用
+2、使用
 
 ```javascript
 import logger from '@mp-logger/logger'
@@ -20,8 +15,24 @@ import logger from '@mp-logger/logger'
 // 初始化配置，一次即可
 logger.initSetting({
   origin: 'http://localhost:3030',
-  sendData: NODE_ENV === 'devlopment' ? false : true,
+  sendData: NODE_ENV === 'development' ? false : true,
 })
+
+or:
+
+App({
+  onLaunch (options) {
+    // 初始化配置，一次即可，通过运行环境及手动配置小程序附带参数 logDebug（推荐）
+    logger.initSetting({
+      origin: 'http://localhost:3030',
+      sendData: !!(NODE_ENV === 'production' && options.query.logDebug),
+    })
+  }
+})
+```
+
+```javascript
+import logger from '@mp-logger/logger'
 
 // 在任意位置调用，与 console 参数一致
 logger.debug('调试')
