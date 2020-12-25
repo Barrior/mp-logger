@@ -49,7 +49,7 @@ logger.error('错误')
 ### initSetting 配置参数
 
 - `origin`: `string`, 必填，服务器地址，`协议 + IP + 端口`，格式：https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin#Examples
-- `sendData`: `string`, 可选，是否向服务端发送日志数据，本地开发可设置为 `false`。
+- `sendData`: `boolean`, 可选，是否向服务端发送日志数据，本地开发可设置为 `false`。
 - `debounceTime`: `number`, 可选，发送日志数据请求的防抖时间，默认 `100`，毫秒计。
 - `requestClient`: `function`, 可选，网络请求客户端，默认为微信 `request`，或提供与微信 `request` [API](https://developers.weixin.qq.com/miniprogram/dev/api/network/request/wx.request.html) 一致的客户端。
 - `requestOptions`: `object`, 可选，客户端请求参数。
